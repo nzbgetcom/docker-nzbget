@@ -2,15 +2,11 @@
 
 # project information
 project_name: nzbget
-project_url: "http://nzbget.net/"
+project_url: "https://nzbget.com/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nzbget-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
-
-# deprecation information
-project_deprecation_status: true
-project_deprecation_message: "nzbget has been deprecated by its developers. Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd"
 
 # supported architectures
 available_architectures:
@@ -87,6 +83,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.02.24:", desc: "Switch image to nzbgetcom (https://nbzget.com) version" }
   - { date: "31.12.22:", desc: "Deprecate image.  Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd" }
   - { date: "27.11.22:", desc: "Advanced notice: This image will be deprecated on 2022-12-31. Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd" }
   - { date: "13.11.22:", desc: "Rebase master to 3.16, migrate to s6v3." }

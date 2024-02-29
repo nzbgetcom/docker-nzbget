@@ -7,6 +7,9 @@ ARG NZBGET_RELEASE
 RUN \
   echo "**** install build packages ****" && \
   apk add \
+    autoconf \
+    automake \
+    boost-dev \
     g++ \
     gcc \
     git \
@@ -17,14 +20,14 @@ RUN \
     openssl-dev && \
   echo "**** build nzbget ****" && \
   if [ -z ${NZBGET_RELEASE+x} ]; then \
-    NZBGET_RELEASE=$(curl -sX GET "https://api.github.com/repos/nzbget/nzbget/releases/latest" \
+    NZBGET_RELEASE=$(curl -sX GET "https://api.github.com/repos/nzbgetcom/nzbget/releases/latest" \
       | awk '/tag_name/{print $4;exit}' FS='[""]'); \
   fi && \
   mkdir -p /app/nzbget && \
-  git clone https://github.com/nzbget/nzbget.git nzbget && \
+  git clone https://github.com/nzbgetcom/nzbget.git nzbget && \
   cd nzbget/ && \
   git checkout ${NZBGET_RELEASE} && \
-  git cherry-pick -n fa57474d && \
+  autoreconf --install && \
   ./configure \
     bindir='${exec_prefix}' && \
   make && \
@@ -77,6 +80,7 @@ RUN \
     python3-dev && \
   echo "**** install packages ****" && \
   apk add --no-cache \
+    boost1.78-json \
     libxml2 \
     libxslt \
     openssl \

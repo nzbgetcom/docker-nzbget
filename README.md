@@ -27,11 +27,6 @@ Find us at:
 * [GitHub](https://github.com/linuxserver) - view the source for all of our repositories.
 * [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
 
-# DEPRECATION NOTICE
-
-This image is deprecated. We will not offer support for this image and it will not be updated.
-nzbget has been deprecated by its developers. Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd
-# [linuxserver/nzbget](https://github.com/linuxserver/docker-nzbget)
 
 [![Scarf.io pulls](https://scarf.sh/installs-badge/linuxserver-ci/linuxserver%2Fnzbget?color=94398d&label-color=555555&logo-color=ffffff&style=for-the-badge&package-type=docker)](https://scarf.sh/gateway/linuxserver-ci/docker/linuxserver%2Fnzbget)
 [![GitHub Stars](https://img.shields.io/github/stars/linuxserver/docker-nzbget.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/linuxserver/docker-nzbget)
@@ -44,9 +39,9 @@ nzbget has been deprecated by its developers. Please consider switching to SABnz
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-nzbget%2Fjob%2Fmaster%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-nzbget/job/master/)
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fnzbget%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/nzbget/latest/index.html)
 
-[Nzbget](http://nzbget.net/) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
+[Nzbget](https://nzbget.com/) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
 
-[![nzbget](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nzbget-banner.png)](http://nzbget.net/)
+[![nzbget](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nzbget-banner.png)](https://nzbget.com/)
 
 ## Supported Architectures
 
@@ -269,6 +264,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.02.24:** - Switch image to nzbgetcom (https://nbzget.com) version
 * **31.12.22:** - Deprecate image.  Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd
 * **27.11.22:** - Advanced notice: This image will be deprecated on 2022-12-31. Please consider switching to SABnzbd https://github.com/linuxserver/docker-sabnzbd
 * **13.11.22:** - Rebase master to 3.16, migrate to s6v3.
